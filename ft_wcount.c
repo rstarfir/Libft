@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_wcount.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rstarfir <rstarfir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/09 01:29:29 by rstarfir          #+#    #+#             */
-/*   Updated: 2019/09/19 18:13:10 by rstarfir         ###   ########.fr       */
+/*   Created: 2019/09/19 16:21:47 by rstarfir          #+#    #+#             */
+/*   Updated: 2019/09/19 16:35:55 by rstarfir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t len)
+int		ft_wcount(char const *s, char c)
 {
+	int		countw;
 	size_t	i;
-	size_t	lsrc;
 
+	countw = 0;
 	i = 0;
-	lsrc = ft_strlen(src);
-	while (i < len)
+	while (s[i])
 	{
-		if (i < lsrc)
-			dst[i] = src[i];
-		else
-			dst[i] = '\0';
-		i++;
+		while (s[i] == c)
+			i++;
+		if (s[i] != c && s[i] != '\0')
+			countw++;
+		while (s[i] != c && s[i] != '\0')
+			i++;
 	}
-	return (dst);
+	return (countw);
 }

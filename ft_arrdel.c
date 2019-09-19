@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_arrdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rstarfir <rstarfir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/09 01:29:29 by rstarfir          #+#    #+#             */
-/*   Updated: 2019/09/19 18:13:10 by rstarfir         ###   ########.fr       */
+/*   Created: 2019/09/19 17:31:28 by rstarfir          #+#    #+#             */
+/*   Updated: 2019/09/19 18:02:49 by rstarfir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dst, const char *src, size_t len)
+void	*ft_arrdel(void **res)
 {
-	size_t	i;
-	size_t	lsrc;
+	void	**tmp;
 
-	i = 0;
-	lsrc = ft_strlen(src);
-	while (i < len)
-	{
-		if (i < lsrc)
-			dst[i] = src[i];
-		else
-			dst[i] = '\0';
-		i++;
-	}
-	return (dst);
+	tmp = res;
+	while (res && *res)
+		free(*res++);
+	free(tmp);
+	tmp = NULL;
+	return (tmp);
 }

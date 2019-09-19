@@ -6,7 +6,7 @@
 /*   By: rstarfir <rstarfir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 13:21:20 by rstarfir          #+#    #+#             */
-/*   Updated: 2019/09/17 20:26:44 by rstarfir         ###   ########.fr       */
+/*   Updated: 2019/09/19 19:34:45 by rstarfir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,6 +61,7 @@ int		ft_strnequ(char const *s1, char const *s2, size_t n);
 char	*ft_strsub(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s);
+char	**ft_strsplit(char const *s, char c);
 int		ft_isalpha(int c);
 int		ft_islower(int c);
 int		ft_isupper(int c);
