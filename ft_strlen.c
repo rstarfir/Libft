@@ -6,7 +6,7 @@
 /*   By: rstarfir <rstarfir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/02 23:41:12 by rstarfir          #+#    #+#             */
-/*   Updated: 2019/09/18 13:10:36 by rstarfir         ###   ########.fr       */
+/*   Updated: 2019/09/19 00:32:06 by rstarfir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,7 @@ size_t	ft_strlen(const char *str)
 	size_t	cnt;
 
 	cnt = 0;
-	while (*str)
-	{
+	while (*str++)
 		cnt++;
-		str++;
-	}
 	return (cnt);
 }
