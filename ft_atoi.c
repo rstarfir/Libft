@@ -6,33 +6,30 @@
 /*   By: rstarfir <rstarfir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 01:27:50 by rstarfir          #+#    #+#             */
-/*   Updated: 2019/09/09 01:31:32 by rstarfir         ###   ########.fr       */
+/*   Updated: 2019/09/20 19:22:37 by rstarfir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_atoi(char *str)
-{
-	int i;
-	int nb;
-	int sign;
+#include "libft.h"
 
-	i = 0;
-	nb = 0;
-	sign = 1;
-	while ((str[i] == ' ') || (str[i] == '\t') || (str[i] == '\n')
-			|| (str[i] == '\v') || (str[i] == '\f') || (str[i] == '\r'))
-		i++;
-	if (str[i] != 0)
-		if ((str[i] == '-') || (str[i] == '+'))
-		{
-			if (str[i] == '-')
-				sign = -1;
-			i++;
-		}
-	while (str[i] >= 48 && str[i] <= 57)
-	{
-		nb = (nb * 10 + (str[i] - 48));
-		i++;
-	}
-	return (nb * sign);
+int		ft_atoi(const char *str)
+{
+	int					sign;
+	int					len;
+	unsigned long long	num;
+
+	num = 0;
+	while (!(len = 0) && ft_isspace(*str))
+		str++;
+	sign = (*str == '-') ? -1 : 1;
+	(*str == '-' || *str == '+') ? str++ : str;
+	while (*str == '0')
+		str++;
+	while (ft_isdigit(*str) && (++len < 21))
+		num = num * 10 + (*str++ - '0');
+	if (sign > 0 && (len > 19 || num > 9223372036854775807))
+		return (-1);
+	if (sign < 0 && (len > 19 || num > 9223372036854775808ULL))
+		return (0);
+	return (sign * num);
 }

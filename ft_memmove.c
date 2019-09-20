@@ -6,7 +6,7 @@
 /*   By: rstarfir <rstarfir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/12 16:22:13 by rstarfir          #+#    #+#             */
-/*   Updated: 2019/09/12 16:22:17 by rstarfir         ###   ########.fr       */
+/*   Updated: 2019/09/20 19:12:40 by rstarfir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,25 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	unsigned char	*str1;
-	unsigned char	*str2;
-	size_t			i;
+	size_t	i;
 
-	str1 = (unsigned char*)dst;
-	str2 = (unsigned char*)src;
 	i = 0;
-	if (str1 == str2)
-		return (dst);
-	if (str1 > str2)
+	if (!dst && !src)
+		return (0);
+	if ((char *)src < (char *)dst)
 	{
-		i = len;
-		while (i-- > 0)
-			str1[i] = str2[i];
+		while (len-- > 0)
+			((char *)dst)[len] = ((char *)src)[len];
 	}
+	else if ((char *)src == (char *)dst)
+		return (dst);
 	else
 	{
-		while (++i < len)
-			str1[i] = str2[i];
+		while (i < len)
+		{
+			((char *)dst)[i] = ((char *)src)[i];
+			i++;
+		}
 	}
-	return (dst);
+	return ((char *)dst);
 }

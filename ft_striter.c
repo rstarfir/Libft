@@ -6,7 +6,7 @@
 /*   By: rstarfir <rstarfir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/14 17:29:12 by rstarfir          #+#    #+#             */
-/*   Updated: 2019/09/14 17:33:00 by rstarfir         ###   ########.fr       */
+/*   Updated: 2019/09/20 20:54:11 by rstarfir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,12 @@
 
 void	ft_striter(char *s, void (*f)(char *))
 {
-	if (!*s || !*f)
-		return ;
-	while (*s)
-		f(s++);
+	if (s && f)
+	{
+		while (*s)
+		{
+			(*f)(s);
+			s++;
+		}
+	}
 }
