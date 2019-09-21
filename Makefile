@@ -6,7 +6,7 @@
 #    By: rstarfir <rstarfir@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/03 22:22:01 by rstarfir          #+#    #+#              #
-#    Updated: 2019/09/21 14:33:07 by rstarfir         ###   ########.fr        #
+#    Updated: 2019/09/21 15:05:43 by rstarfir         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,6 +57,8 @@ SRCS = ft_memset.c \
 		ft_isspace.c \
 		ft_isupper.c \
 		ft_islower.c \
+		ft_sqrt.c \
+		ft_range.c \
 		ft_toupper.c \
 		ft_tolower.c \
 		ft_putchar.c \

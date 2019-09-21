@@ -6,7 +6,7 @@
 /*   By: rstarfir <rstarfir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 13:21:20 by rstarfir          #+#    #+#             */
-/*   Updated: 2019/09/20 23:52:52 by rstarfir         ###   ########.fr       */
+/*   Updated: 2019/09/21 15:06:32 by rstarfir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,8 @@ int					ft_isascii(int c);
 int					ft_isalnum(int c);
 int					ft_isprint(int c);
 int					ft_isspace(int c);
+int					*ft_range(int min, int max);
+int					ft_sqrt(int nb);
 t_list				*ft_lstnew(void const *content, size_t content_size);
 void				ft_lstdelone(t_list **alst, void (*del)(void*, size_t));
 void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
