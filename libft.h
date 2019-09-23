@@ -6,7 +6,7 @@
 /*   By: rstarfir <rstarfir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 13:21:20 by rstarfir          #+#    #+#             */
-/*   Updated: 2019/09/21 15:06:32 by rstarfir         ###   ########.fr       */
+/*   Updated: 2019/09/23 23:31:46 by rstarfir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int					ft_memcmp(const void *s1, const void *s2, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
 void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ap);
-char				*ft_strchr(char *str, int ch);
+char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 void				ft_putstr(char *str);
 void				ft_putstr_fd(char *str, int fd);
@@ -47,10 +47,10 @@ void				ft_putendl(char *str);
 void				ft_putendl_fd(char *str, int fd);
 char				*ft_strcat(char *s1, const char *s2);
 int					ft_strcmp(const char *s1, const char *s2);
-char				*ft_strcpy(char *dest, char *src);
+char				*ft_strcpy(char *dst, const char *src);
 char				*ft_strdup(char *src);
 size_t				ft_strlen(const char *str);
-char				*ft_strncat(char *dest, char *src, int nb);
+char				*ft_strncat(char *s1, const char *s2, size_t n);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 char				*ft_strncpy(char *dst, const char *src, size_t len);

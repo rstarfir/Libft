@@ -6,25 +6,27 @@
 /*   By: rstarfir <rstarfir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/08 22:30:04 by rstarfir          #+#    #+#             */
-/*   Updated: 2019/09/09 19:21:48 by rstarfir         ###   ########.fr       */
+/*   Updated: 2019/09/23 23:43:08 by rstarfir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strncat(char *dest, char *src, int nb)
+#include "libft.h"
+
+char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	int		i;
-	int		dest_size;
+	size_t		i;
+	size_t		s1_size;
 
 	i = 0;
-	dest_size = 0;
-	while (dest[dest_size])
-		dest_size++;
-	while (i < nb && src[i])
+	s1_size = 0;
+	while (s1[s1_size])
+		s1_size++;
+	while (i < n && s2[i])
 	{
-		dest[dest_size] = src[i];
-		dest_size++;
+		s1[s1_size] = s2[i];
+		s1_size++;
 		i++;
 	}
-	dest[dest_size] = '\0';
-	return (dest);
+	s1[s1_size] = '\0';
+	return (s1);
 }
