@@ -6,7 +6,7 @@
 /*   By: rstarfir <rstarfir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/09 13:21:20 by rstarfir          #+#    #+#             */
-/*   Updated: 2019/09/23 23:31:46 by rstarfir         ###   ########.fr       */
+/*   Updated: 2019/09/24 14:26:36 by rstarfir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,14 +41,14 @@ void				*ft_memalloc(size_t size);
 void				ft_memdel(void **ap);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
-void				ft_putstr(char *str);
-void				ft_putstr_fd(char *str, int fd);
-void				ft_putendl(char *str);
-void				ft_putendl_fd(char *str, int fd);
+void				ft_putstr(char const *str);
+void				ft_putstr_fd(char const *str, int fd);
+void				ft_putendl(char const *str);
+void				ft_putendl_fd(char const *str, int fd);
 char				*ft_strcat(char *s1, const char *s2);
 int					ft_strcmp(const char *s1, const char *s2);
 char				*ft_strcpy(char *dst, const char *src);
-char				*ft_strdup(char *src);
+char				*ft_strdup(const char *src);
 size_t				ft_strlen(const char *str);
 char				*ft_strncat(char *s1, const char *s2, size_t n);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);

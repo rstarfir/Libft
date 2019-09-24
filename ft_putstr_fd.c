@@ -6,13 +6,13 @@
 /*   By: rstarfir <rstarfir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 16:40:27 by rstarfir          #+#    #+#             */
-/*   Updated: 2019/09/10 16:43:28 by rstarfir         ###   ########.fr       */
+/*   Updated: 2019/09/24 14:35:04 by rstarfir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putstr_fd(char *str, int fd)
+void	ft_putstr_fd(char const *str, int fd)
 {
 	if (str)
 	{
