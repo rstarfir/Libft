@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_islower.c                                       :+:      :+:    :+:   */
+/*   ft_freememmass.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rstarfir <rstarfir@student.42.fr>          +#+  +:+       +#+        */
+/*   By: poatmeal <poatmeal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/09/09 22:36:42 by rstarfir          #+#    #+#             */
-/*   Updated: 2019/09/09 23:08:18 by rstarfir         ###   ########.fr       */
+/*   Created: 2019/09/22 13:56:39 by poatmeal          #+#    #+#             */
+/*   Updated: 2020/02/17 13:33:14 by poatmeal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_islower(int c)
+void		*ft_freememmass(char **memmass)
 {
-	return (c >= 97 && c <= 122);
+	while (memmass && *memmass)
+		free(*memmass++);
+	free(memmass);
+	memmass = NULL;
+	return (memmass);
 }
